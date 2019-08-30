@@ -16,11 +16,11 @@
 
 //Pizza Object
 //User chooses what size pizza they would like
-function Pizza(name, size, sauce, topping){
+function Pizza(name, size, sauce, toppings){
   this.name = name,
   this.size = size,
   this.sauce = sauce,
-  this.toppings = [],
+  this.toppings = toppings,
   this.subtotal = 0;
 }
 
@@ -31,14 +31,8 @@ function Pizza(name, size, sauce, topping){
 
 Pizza.prototype.calcToppers = function(){
   var toppingTotal = 0;
-  this.toppings.forEach(function(topping){
-    toppingTotal += 5;
-  });
-  this.subtotal = toppingsTotal + 10;
-  return this.subtotal
+  this.toppings.forEach(function(topping))
 }
-
-
 //User-Interface Logic
 
 //Creates a new Cart
