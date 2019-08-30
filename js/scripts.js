@@ -54,7 +54,7 @@ function showOrder(pizza) {
 };
 
 $(document).ready(function() {
-  $("button#addToCart").click(function(event){
+  $("button#checkout").click(function(event){
     event.preventDefault();
     //User enters name
     var customerName = $("input#custName").val();
