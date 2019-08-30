@@ -16,7 +16,7 @@
 
 //Pizza Object
 //User chooses what size pizza they would like
-function Pizza(name, size, toppings){
+function Pizza(name, size, sauce, toppings){
   this.name = name,
   this.size = size,
   this.sauce = sauce,
@@ -25,8 +25,8 @@ function Pizza(name, size, toppings){
 }
 
 //User chooses what toppings they would like
-Pizza.prototype.toppings = function(){
-  this.toppings = addTopping.push(this.toppings);
+Pizza.prototype.toppings = function(addTops){
+  this.toppings = addTops.push(this.toppings);
 }
 
 Pizza.prototype.calcToppers = function(){
@@ -45,11 +45,11 @@ $(document).ready(function() {
     event.preventDefault();
     //User enters name
     var customerName = $("input#custName").val();
-    var size = $("input:radio[name=size]:checked").val();
-    var sauce = $("input:radio[name=sauce]:checked").val();
-    var toppers = $("input:checkbox[name=topping]:checked").val();
-    console.log(customerName, size, sauce, toppers);
-    var newPizza = new Pizza(customerName, size, sauce, toppers);
+    var chosenSize = $("input:radio[name=size]:checked").val();
+    var chosenSauce = $("input:radio[name=sauce]:checked").val();
+    var chosenToppers = $("input:checkbox[name=topping]:checked").val();
+    var newPizza = new Pizza(customerName, chosenSize, chosenSauce, chosenToppers);
+    console.log(newPizza);
 
   });
 });
