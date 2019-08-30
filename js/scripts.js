@@ -20,8 +20,8 @@ function Pizza(name, size, sauce, toppings){
   this.name = name,
   this.size = size,
   this.sauce = sauce,
-  this.toppings = toppings
-  this.price = 0;
+  this.toppings = toppings,
+  this.price = 12
 }
 
 //User chooses what toppings they would like
@@ -30,12 +30,19 @@ function Pizza(name, size, sauce, toppings){
 // }
 
 Pizza.prototype.calcToppers = function(){
-  this.price = this.toppings.length;
+  this.price += (this.toppings.length) * 5;
 }
 //User-Interface Logic
 
 //Creates a new Cart
 // var newCart = new Cart();
+
+function showOrder(pizza) {
+  $(".yourName").text(pizza.name);
+  $(".yourSize").text(pizza.size);
+  $(".yourToppings").text(pizza.toppings)
+  $(".yourPrice").text(pizza.price);
+}
 
 $(document).ready(function() {
   $("button#addToCart").click(function(event){
@@ -48,6 +55,8 @@ $(document).ready(function() {
       return this.value;
     }).get();
     var newPizza = new Pizza(customerName, chosenSize, chosenSauce, chosenTopping);
+    newPizza.calcToppers();
+    showOrder(newPizza);
     console.log(newPizza);
 
   });
