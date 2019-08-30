@@ -2,8 +2,7 @@
 //Business Logic
 
 //Order/Shopping Cart Object
-function Cart(name){
-  this.name = name,
+function Cart(){
   this.pizzas = [],
   this.cartTotal = 0,
   this.currentId = 0
@@ -23,7 +22,7 @@ Cart.prototype.addPizza = function(pizza){
 Cart.prototype.calcTotal = function(){
   var total = 0;
   this.pizzas.forEach(function(pizza){
-    total += pizza.total;
+    total += pizza.price;
   })
   this.cartTotal = total;
   return total;
@@ -32,7 +31,7 @@ Cart.prototype.calcTotal = function(){
 //Pizza Object
 //User chooses what size pizza they would like
 function Pizza(name, size, sauce, toppings){
-  this.name = name,
+  this.name = name;
   this.size = size,
   this.sauce = sauce,
   this.toppings = toppings,
@@ -47,13 +46,11 @@ Pizza.prototype.calcToppers = function(){
 //Creates a new Cart
 var newCart = new Cart();
 
-function showOrder(pizzaParty) {
-  var pizzaCart = $("ul#pizzas");
-  var something = "";
-  pizzaParty.contacts.forEach(function(pizza) {
-    something += "<li id=" + pizza.id + ">" + pizza.size + " " + pizza.sauce + " " + pizza.toppings"</li>";
-  });
-  pizzaCart.text(something);
+function showOrder(pizza) {
+  $(".yourName").text(pizza.name);
+  $(".yourSize").text(pizza.size);
+  $(".yourToppings").text(pizza.toppings.join(", "));
+  $(".yourPrice").text("$" + pizza.price);
 };
 
 $(document).ready(function() {

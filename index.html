@@ -9,9 +9,9 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
+
         <h2>Welcome to Crusty Joe's Pizza!</h2>
-      </div>
+
       <div class="row">
         <div class="col-md-8">
           <form class="form" action="index.html" method="post">
@@ -41,6 +41,7 @@
             <br>
             <br>
             <button id="addToCart" type="button" name="button" class="btn btn-primary">Add To Cart</button>
+            <button id="addPizza" type="reset" name="button" class="btn btn-primary">Add Pizza</button>
           </form>
         </div>
         <br>
@@ -50,8 +51,9 @@
             <h3>Your Name: <span class="yourName"></span><h3>
           </div>
           <div class="panel-body">
-            <h4>Cart Details:<h4>
-              <ul id="pizzas"></ul>
+            <h4>Your Order: <span class="yourOrder"></span><h4>
+              <li> <span class="yourSize"></span> </li>
+              <li> <span class="yourToppings"></span> </li>
             <br>
             <h4><strong>Cart Total: </strong><span class="yourPrice"></span></h4>
           </div>
