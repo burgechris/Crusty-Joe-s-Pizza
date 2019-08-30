@@ -16,23 +16,27 @@
 
 //Pizza Object
 //User chooses what size pizza they would like
-function Pizza(name, size, sauce, toppings){
+function Pizza(name, size, sauce, topping){
   this.name = name,
   this.size = size,
   this.sauce = sauce,
   this.toppings = [],
-  this.subtotal = 12
+  this.subtotal = 0;
 }
 
 //User chooses what toppings they would like
-Pizza.prototype.toppings = function(addTops){
-  this.toppings = addTops.push(this.toppings);
-}
+// Pizza.prototype.toppings = function(addTops){
+//   this.toppings = addTops.push(this.toppings);
+// }
 
 Pizza.prototype.calcToppers = function(){
-  this.subtotal = this.toppings.length + 5;
+  var toppingTotal = 0;
+  this.toppings.forEach(function(topping){
+    toppingTotal += 5;
+  });
+  this.subtotal = toppingsTotal + 10;
+  return this.subtotal
 }
-
 
 
 //User-Interface Logic
@@ -47,8 +51,10 @@ $(document).ready(function() {
     var customerName = $("input#custName").val();
     var chosenSize = $("input:radio[name=size]:checked").val();
     var chosenSauce = $("input:radio[name=sauce]:checked").val();
-    var chosenToppers = $("input:checkbox[name=topping]:checked").val();
-    var newPizza = new Pizza(customerName, chosenSize, chosenSauce, chosenToppers);
+    var chosenTopping = $("input:checkbox[name=topping]:checked").map(function(){
+      return this.value;
+    }).get();
+    var newPizza = new Pizza(customerName, chosenSize, chosenSauce, chosenTopping);
     console.log(newPizza);
 
   });
