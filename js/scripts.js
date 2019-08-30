@@ -20,8 +20,8 @@ function Pizza(name, size, sauce, toppings){
   this.name = name,
   this.size = size,
   this.sauce = sauce,
-  this.toppings = toppings,
-  this.subtotal = 0;
+  this.toppings = toppings
+  this.price = 0;
 }
 
 //User chooses what toppings they would like
@@ -30,8 +30,7 @@ function Pizza(name, size, sauce, toppings){
 // }
 
 Pizza.prototype.calcToppers = function(){
-  var toppingTotal = 0;
-  this.toppings.forEach(function(topping))
+  this.price = this.toppings.length;
 }
 //User-Interface Logic
 
