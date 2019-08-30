@@ -10,33 +10,37 @@
   <body>
     <div class="container">
       <div class="jumbotron">
-        <h2>Welcome to Crusty Joe's!</h2>
+        <h2>Welcome to Crusty Joe's Pizza!</h2>
       </div>
       <div class="row">
         <div class="col-md-8">
           <form class="form" action="index.html" method="post">
-            <h4>Choose the Size of Your Pie</h4>
-            <label for="customerName"></label>
+            <label for="customerName">Please Enter Your Name</label>
             <input type="text" name="name" class="form-control" placeholder="Name" value="">
-            <input type="radio" name="size" value="small">
-            <input type="radio" name="size" value="medium">
-            <input type="radio" name="size" value="large">
+            <br>
+            <h4>Choose the Size of Your Pie</h4>
+            <input type="radio" name="size" value="small"> Small
+            <input type="radio" name="size" value="medium"> Medium
+            <input type="radio" name="size" value="large"> Large
+            <br>
             <br>
             <h4>Choose Your Sauce</h4>
-            <input type="checkbox" name="sauce" value="marinara">
-            <input type="checkbox" name="sauce" value="alfredo">
-            <input type="checkbox" name="sauce" value="oliveOil">
+            <input type="checkbox" name="sauce" value="marinara"> Marinara
+            <input type="checkbox" name="sauce" value="alfredo"> Creamy Alfredo
+            <input type="checkbox" name="sauce" value="oliveOil"> Olive Oil Base
+            <br>
             <br>
             <h4>Choose Your Toppings</h4>
-            <input type="checkbox" name="topping" value="pepperoni">
-            <input type="checkbox" name="topping" value="sausage">
-            <input type="checkbox" name="topping" value="jalapeno">
-            <input type="checkbox" name="topping" value="mushroom">
-            <input type="checkbox" name="topping" value="veggies">
-            <input type="checkbox" name="topping" value="canadianBacon">
-            <input type="checkbox" name="topping" value="pineapple">
+            <input type="checkbox" name="topping" value="pepperoni"> Pepperoni
+            <input type="checkbox" name="topping" value="sausage"> Sausage
+            <input type="checkbox" name="topping" value="jalapeno"> Jalapeno
+            <input type="checkbox" name="topping" value="mushroom"> Mushroom
+            <input type="checkbox" name="topping" value="veggies"> Veggies
+            <input type="checkbox" name="topping" value="canadianBacon"> Canadian Bacon
+            <input type="checkbox" name="topping" value="pineapple"> Pineapple
             <br>
-            <button type="button" name="button" class="btn btn-primary"></button>
+            <br>
+            <button id="addToCart" type="button" name="button" class="btn btn-primary">Add To Cart</button>
           </form>
         </div>
       </div>
