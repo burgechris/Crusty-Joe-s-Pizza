@@ -17,10 +17,10 @@
 ## Specs
 | Behavior | Input | Output |
 | ------------- |:-------------:| -----:|
-|  |  |  |
-|  |  |  |
-|  |  |  |
-|  |  |  |
+| User enters name | 'Sam' | 'New customer: Sam' |
+| User chooses the size of pizza he/she would like | 'Large' | 'Subtotal is $12' |
+| User chooses the toppings he/she would like | 'Pepperoni' | 'Subtotal is $18' |
+| User adds the pizza to the cart | 'Add to cart' | 'The total is $18' |
 |  |  |  |
 
 
