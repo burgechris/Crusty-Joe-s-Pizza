@@ -11,18 +11,25 @@ function Cart(name){
 //User adds the pizza to the Cart
 
 //Pizza Object
-function Pizza(toppings){
-  this.toppings = toppings,
+//User chooses what size pizza they would like
+function Pizza(size, toppings){
+  this.size = size,
+  this.toppings = [],
   this.subtotal = 0
 }
-//User chooses what size pizza they would like
+
 //User chooses what toppings they would like
+Pizza.prototype.toppings = function(){
+  this.toppings = addTopping.push(this.toppings)
+}
+
 
 
 
 
 
 //User-Interface Logic
+var newCart = new Cart();
 
 //User enters name
 
