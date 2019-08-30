@@ -12,7 +12,34 @@
       <div class="jumbotron">
         <h2>Welcome to Crusty Joe's!</h2>
       </div>
-      
+      <div class="row">
+        <div class="col-md-8">
+          <form class="form" action="index.html" method="post">
+            <h4>Choose the Size of Your Pie</h4>
+            <label for="customerName"></label>
+            <input type="text" name="name" class="form-control" placeholder="Name" value="">
+            <input type="radio" name="size" value="small">
+            <input type="radio" name="size" value="medium">
+            <input type="radio" name="size" value="large">
+            <br>
+            <h4>Choose Your Sauce</h4>
+            <input type="checkbox" name="sauce" value="marinara">
+            <input type="checkbox" name="sauce" value="alfredo">
+            <input type="checkbox" name="sauce" value="oliveOil">
+            <br>
+            <h4>Choose Your Toppings</h4>
+            <input type="checkbox" name="topping" value="pepperoni">
+            <input type="checkbox" name="topping" value="sausage">
+            <input type="checkbox" name="topping" value="jalapeno">
+            <input type="checkbox" name="topping" value="mushroom">
+            <input type="checkbox" name="topping" value="veggies">
+            <input type="checkbox" name="topping" value="canadianBacon">
+            <input type="checkbox" name="topping" value="pineapple">
+            <br>
+            <button type="button" name="button" class="btn btn-primary"></button>
+          </form>
+        </div>
+      </div>
     </div>
   </body>
 </html>
