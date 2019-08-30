@@ -19,9 +19,9 @@
             <input type="text" name="name" id="custName" class="form-control" placeholder="Name" value="">
             <br>
             <h4>Choose the Size of Your Pie ($12)</h4>
-            <input type="radio" name="size" value="small"> Small
-            <input type="radio" name="size" value="medium"> Medium
-            <input type="radio" name="size" value="large"> Large
+            <input type="radio" name="size" value="Small"> Small
+            <input type="radio" name="size" value="Medium"> Medium
+            <input type="radio" name="size" value="Large"> Large
             <br>
             <br>
             <h4>Choose Your Sauce (included)</h4>
@@ -45,13 +45,17 @@
         </div>
         <br>
         <br>
-        <div class="pizzaDetails">
-          <h3>Your Name: <span class="yourName"></span><h3>
-          <h4>Your Order: <span class="yourOrder"></span><h4>
-            <li> <span class="yourSize"></span> </li>
-            <li> <span class="yourToppings"></span> </li>
-          <br>
-          <h4><strong>Cart Total: </strong><span class="yourPrice"></span></h4>
+        <div class="panel pizzaDetails">
+          <div class="panel-heading">
+            <h3>Your Name: <span class="yourName"></span><h3>
+          </div>
+          <div class="panel-body">
+            <h4>Your Order: <span class="yourOrder"></span><h4>
+              <li> <span class="yourSize"></span> </li>
+              <li> <span class="yourToppings"></span> </li>
+            <br>
+            <h4><strong>Cart Total: </strong><span class="yourPrice"></span></h4>
+          </div>
         </div>
       </div>
     </div>
