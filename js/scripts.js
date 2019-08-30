@@ -47,12 +47,14 @@ Pizza.prototype.calcToppers = function(){
 //Creates a new Cart
 var newCart = new Cart();
 
-function showOrder(pizza) {
-  $(".yourName").text(pizza.name);
-  $(".yourSize").text(pizza.size);
-  $(".yourToppings").text(pizza.toppings.join(" + "));
-  $(".yourPrice").text(pizza.price);
-}
+function showOrder(pizzaParty) {
+  var pizzaCart = $("ul#pizzas");
+  var something = "";
+  pizzaParty.contacts.forEach(function(pizza) {
+    something += "<li id=" + pizza.id + ">" + pizza.size + " " + pizza.sauce + " " + pizza.toppings"</li>";
+  });
+  pizzaCart.text(something);
+};
 
 $(document).ready(function() {
   $("button#addToCart").click(function(event){
