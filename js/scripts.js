@@ -39,6 +39,7 @@ function Pizza(name, size, sauce, toppings){
 }
 
 Pizza.prototype.calcToppers = function(){
+  
   this.price += (this.toppings.length) * 5;
 }
 //User-Interface Logic
