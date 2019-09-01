@@ -31,16 +31,31 @@ Cart.prototype.calcTotal = function(){
 //Pizza Object
 //User chooses what size pizza they would like
 function Pizza(name, size, sauce, toppings){
-  this.name = name;
+  this.name = name,
   this.size = size,
   this.sauce = sauce,
   this.toppings = toppings,
-  this.price = 12
+  this.price = 0
 }
 
-Pizza.prototype.calcToppers = function(){
-  
-  this.price += (this.toppings.length) * 5;
+Pizza.prototype.sizePrice = function(){
+  var size = this.size;
+  if(size === 'Small'){
+    this.price += 8;
+  } else if(size === 'Medium'){
+    this.price += 10;
+  } else if(size === 'Large'){
+    this.price += 12;
+  }
+}
+
+Pizza.prototype.topPrice = function(){
+  for(var i = 0; i < this.toppings.length; i ++){
+    if(this.toppings[i] === 'Pineapple'){
+    alert("Gross! Choose a different topping. Pineapple doesn't belong on pizza.")
+    }
+  }
+  this.price += (this.toppings.length) * 2;
 }
 //User-Interface Logic
 
@@ -65,8 +80,10 @@ $(document).ready(function() {
       return this.value;
     }).get();
     var newPizza = new Pizza(customerName, chosenSize, chosenSauce, chosenTopping);
-    newPizza.calcToppers();
+    newPizza.topPrice();
+    newPizza.sizePrice();
     showOrder(newPizza);
+
     newCart.addPizza(newPizza);
     newCart.calcTotal();
     console.log(newCart);
